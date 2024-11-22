@@ -155,4 +155,21 @@ class HomeController extends Controller{
         $user->save();
         return back()->with('status', 'Parol yangilandi');
     }
+
+    public function report(){
+        return view('report');
+    }
+    public function report_exel(Request $request){
+        $Start = $request->start;
+        $End = $request->end;
+        $Xatlar = Xatlar::where('created_at','>=',$request->start." 00:00:00")->where('created_at','<=',$request->end." 23:59:59")->get();
+        if($request->type=='EXCEL'){
+            return view('report1',compact('Start','End','Xatlar'));
+        }else{
+            return view('report2',compact('Start','End','Xatlar'));
+        }
+    }
+
+
+    
 }

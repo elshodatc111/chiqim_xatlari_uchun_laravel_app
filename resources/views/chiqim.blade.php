@@ -85,7 +85,7 @@
                         </div>
                         <div class="row">
                             <div class="col-6 mt-2">
-                            <label for="">Nushalar soni</label>
+                            <label for="">Nusxalar soni</label>
                             <input type="number" name="nushalar" required class="form-control">
                             </div>
                             <div class="col-6 mt-2">

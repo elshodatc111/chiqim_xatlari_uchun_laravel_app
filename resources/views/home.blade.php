@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    Chiqim xatlar
+                    E-kotibyat
                 </div>
             </div>
         </div>

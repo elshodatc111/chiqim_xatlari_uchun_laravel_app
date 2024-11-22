@@ -28,7 +28,7 @@
                     </div>
                     <div class="row">
                         <div class="col-6 mt-2">
-                            <label for="">Nushalar soni</label>
+                            <label for="">Nusxalar soni</label>
                             <input type="text" disabled value="{{ $Xatlar['nushalar'] }}" class="form-control">
                         </div>
                         <div class="col-6 mt-2">

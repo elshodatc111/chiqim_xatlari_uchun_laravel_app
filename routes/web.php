@@ -16,6 +16,10 @@ Route::get('/profel', [HomeController::class, 'profel'])->name('profel');
 Route::post('/updatePassword', [HomeController::class, 'updatePassword'])->name('updatePassword');
 
 
+Route::get('/report', [HomeController::class, 'report'])->name('report');
+Route::post('/report_exel', [HomeController::class, 'report_exel'])->name('report_exel');
+
+
 Route::get('/chiqim', [HomeController::class, 'chiqim'])->name('chiqim');
 Route::post('/chiqim_create', [HomeController::class, 'chiqim_create'])->name('chiqim_create');
 Route::get('/chiqim_show/{id}', [HomeController::class, 'chiqim_show'])->name('chiqim_show');

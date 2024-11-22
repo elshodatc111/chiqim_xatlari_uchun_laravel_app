@@ -21,7 +21,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Chiqim Xatlar
+                    E-kotibyat
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -65,6 +65,7 @@
                                     @if(auth()->user()->type=='Admin')
                                     <a class="dropdown-item" href="{{ route('settings') }}">Sozlamalar</a>
                                     <a class="dropdown-item" href="{{ route('hodimlar') }}">Hodimlar</a>
+                                    <a class="dropdown-item" href="{{ route('report') }}">Hisobot</a>
                                     @endif
                                     <a class="dropdown-item" href="{{ route('profel') }}">Profel</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"

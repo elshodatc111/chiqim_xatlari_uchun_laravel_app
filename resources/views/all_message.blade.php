@@ -16,7 +16,7 @@
                             <th>Chiqim turi</th>
                             <th>Tashkilot</th>
                             <th>Chiqim raqami</th>
-                            <th>Nushalar soni</th>
+                            <th>Nusxalar soni</th>
                             <th>Sahifalar soni</th>
                             <th>Chiqim vaqti</th>
                         </thead>
