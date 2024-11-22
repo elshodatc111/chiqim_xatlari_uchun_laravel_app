@@ -12,6 +12,9 @@ Route::get('/my_message', [HomeController::class, 'my_message'])->name('my_messa
 Route::get('/bolim_message', [HomeController::class, 'bolim_message'])->name('bolim_message');
 Route::get('/all_message', [HomeController::class, 'all_message'])->name('all_message');
 
+Route::get('/profel', [HomeController::class, 'profel'])->name('profel');
+Route::post('/updatePassword', [HomeController::class, 'updatePassword'])->name('updatePassword');
+
 
 Route::get('/chiqim', [HomeController::class, 'chiqim'])->name('chiqim');
 Route::post('/chiqim_create', [HomeController::class, 'chiqim_create'])->name('chiqim_create');

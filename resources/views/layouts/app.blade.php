@@ -21,7 +21,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    Chiqim Xatlar
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -32,12 +32,16 @@
                     <ul class="navbar-nav me-auto">
                         @guest
                         @else
+                        @if(auth()->user()->type=="Ijro hodim" OR auth()->user()->type=="Admin")
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('all_message') }}">Barcha xatlar</a>
                         </li>
+                        @endif
+                        @if(auth()->user()->type=="Bo'lim raxbari" OR auth()->user()->type=="Admin")
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('bolim_message') }}">Bo'lim xatlar</a>
                         </li>
+                        @endif
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('my_message') }}">Mening xatlarim</a>
                         </li>
@@ -58,9 +62,11 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    @if(auth()->user()->type=='Admin')
                                     <a class="dropdown-item" href="{{ route('settings') }}">Sozlamalar</a>
                                     <a class="dropdown-item" href="{{ route('hodimlar') }}">Hodimlar</a>
-                                    <a class="dropdown-item" href="#">Profel</a>
+                                    @endif
+                                    <a class="dropdown-item" href="{{ route('profel') }}">Profel</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

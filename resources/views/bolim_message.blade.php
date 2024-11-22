@@ -1,13 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
+<link href="https://atko.tech/NiceAdmin/assets/vendor/simple-datatables/style.css" rel="stylesheet">
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">Bo'lim xatlari</div>
                 <div class="card-body">
-                    <table class="table table-bordered text-center" srtle="font-size:14px;">
+                    <table class="table text-center datatable" srtle="font-size:12px;">
                         <thead>
                             <th>#</th>
                             <th>Bo'lim</th>
@@ -21,7 +22,7 @@
                         </thead>
                         <tbody>
                             @forelse($Xatlar as $item)
-                            <tr>
+                            <tr class="text-center">
                                 <td>{{ $loop->index+1 }}</td>
                                 <td>{{ $item['section'] }}</td>
                                 <td>{{ $item['fio'] }}</td>
@@ -44,4 +45,7 @@
         </div>
     </div>
 </div>
+<script src="https://atko.tech/NiceAdmin/assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="https://atko.tech/NiceAdmin/assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="https://atko.tech/NiceAdmin/assets/js/main.js"></script>
 @endsection
