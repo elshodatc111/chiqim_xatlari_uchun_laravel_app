@@ -31,3 +31,6 @@ Route::delete('/hodim_del/{id}', [HomeController::class, 'hodim_del'])->name('ho
 Route::get('/settings', [HomeController::class, 'settings'])->name('settings');
 Route::post('/settings_create', [HomeController::class, 'settings_create'])->name('settings_create');
 Route::delete('/settings_del/{id}', [HomeController::class, 'settings_del'])->name('settings_del');
+
+
+Route::get('/charts', [HomeController::class, 'charts'])->name('charts');

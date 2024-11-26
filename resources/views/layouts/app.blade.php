@@ -31,10 +31,13 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         @guest
-                        @else
+                        @else 
                         @if(auth()->user()->type=="Ijro hodim" OR auth()->user()->type=="Admin")
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('all_message') }}">Barcha xatlar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('charts') }}">Statistika</a>
                         </li>
                         @endif
                         @if(auth()->user()->type=="Bo'lim raxbari" OR auth()->user()->type=="Admin")

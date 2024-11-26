@@ -169,6 +169,25 @@ class HomeController extends Controller{
             return view('report2',compact('Start','End','Xatlar'));
         }
     }
+    public function charts(){
+        $ChartBolim = array();
+        $Bolim = Bolim::get();
+        $counts = count(Xatlar::get());
+        foreach ($Bolim as $key => $value) {
+            $Xatlar = Xatlar::where('section',$value['bolim'])->get();
+            $ChartBolim[$key]['name'] = $value['bolim'];
+            $ChartBolim[$key]['count'] = count($Xatlar);
+        }
+        $User = User::get();
+        $ChartHodim = array();
+        foreach ($User as $key => $value) {
+            $Xatlar2 = Xatlar::where('fio',$value['name'])->get();
+            $ChartHodim[$key]['bolim'] = $value['bolim'];
+            $ChartHodim[$key]['name'] = $value['name'];
+            $ChartHodim[$key]['count'] = count($Xatlar2);
+        }
+        return view('charts',compact('counts','ChartBolim','ChartHodim'));
+    }
 
 
     
